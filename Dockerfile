@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/resthotel-0.0.1-SNAPSHOT.jar resthotel.jar
+COPY --from=build /target/Api-Rest-0.0.1-SNAPSHOT.jar Api-Rest.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","resthotel.jar"]
+ENTRYPOINT ["java","-jar","Api-Rest.jar"]
